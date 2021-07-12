@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IndexModel
+
+<div class="text-center">
+    <h1 class="display-4">16valve</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">16valve</a>.</p>
+    @if (ViewBag != null && ViewBag.List != null)
+    {
+
+
+        @foreach (var element in ViewBag.List)
+        {
+            <div>
+                <p><b>@element.Name</b></p>
+     <p><b>@element.About</b></p>
+            </div>
+
+        }
+    }
+
+    <img src="https://aczpix.b-cdn.net/wp-content/uploads/2020/07/foto-octavia-4-rs_01.jpg" width="300" />
+</div>
